@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이상치 탐지 모델 개발 - 포트폴리오</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="back-to-home">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-home"></i>
+            <span>홈으로</span>
+        </a>
+    </div>
+
+    <!-- 맨 위로 이동 버튼 -->
+    <div class="scroll-to-top">
+        <a href="#" class="scroll-to-top-btn">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <header class="project-header">
+        <div class="container">
+            <div class="project-title">
+                <h1>이상치 탐지 모델 개발</h1>
+                <p class="project-subtitle">결제 금액 이상치 탐지를 통한 손실 방지 프로젝트</p>
+            </div>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>2024.09 - 2024.11</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-users"></i>
+                    <span>개인 프로젝트</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="project-content">
+        <div class="container">
+            
+            <section class="project-section">
+                <h2><i class="fas fa-info-circle"></i> 프로젝트 개요</h2>
+                <div class="content-grid text-only">
+                    <div class="text-content">
+                        <h3>배경 및 목적</h3>
+                        <p>
+                            API 통신 오류, 고객 대응팀의 휴먼 에러, 유저의 실수 등으로 과도하게 높거나 낮은 금액이 결제되는 일이 발생했습니다.</br>
+                            이러한 이상 결제는 회사의 재정적 손실과 유저의 이탈을 초래할 수 있는 심각한 문제였습니다.
+                        </p>
+                        <p>
+                            근무 기간, 유저의 관계성, 결제 금액, 환자 상태 등을 기반으로 결제 금액의 이상치를 탐지할 수 있는 모델을 개발하여</br>
+                            즉각적인 대처를 통해 큰 손실 및 유저 이탈을 방지하는 것이 목표였습니다.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2><i class="fas fa-tools"></i> 사용 기술</h2>
+                <div class="tech-stack">
+                    <div class="tech-category">
+                        <h3>사용 언어</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">SQL</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>이상치 탐지 모델</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">IQR</span>
+                            <span class="tech-item">Isolation Forest</span>
+                            <span class="tech-item">RRCF</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>시각화</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Matplotlib</span>
+                            <span class="tech-item">Plotly</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2><i class="fas fa-sitemap"></i> 모델 개발 전략</h2>
+                <div class="content-grid text-only">
+                    <div class="text-content">
+                        <h3>모델 선택 전략</h3>
+                        <p>
+                            실시간 데이터 탐지에 사용하기 위해 비교적 가벼운 모델을 사용하고자 하였고,
+                            모델 성능 비교를 위해 가장 단순한 IQR 모델부터 Isolation Forest, RRCF(Robust Random Cut Forest) 모델 등을 테스트하였습니다. 
+                        </p>
+                        
+                        <h3>다중 모델 접근법</h3>
+                        <ul>
+                            <li><strong>IQR 모델</strong>: 통계적 기반의 단순하고 빠른 이상치 탐지</li>
+                            <li><strong>Isolation Forest</strong>: 트리 기반의 효율적인 이상치 탐지</li>
+                            <li><strong>RRCF (Robust Random Cut Forest)</strong>: 스트리밍 데이터에 적합한 이상치 탐지</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2><i class="fas fa-code"></i> 구현 내용</h2>
+                <div class="implementation-grid">
+                    <div class="implementation-item">
+                        <h3>1. 데이터 전처리 및 특성 분석</h3>
+                        <div class="content-grid text-only">
+                            <div class="text-content">
+                                <p>
+                                    결제 데이터의 특성을 분석하고 이상치 탐지에 적합한 특성을 선별했습니다.
+                                </p>
+                                <h4>전처리 과정:</h4>
+                                <ul>
+                                    <li><strong>결측치 처리</strong>: 평균값 대체 및 삭제</li>
+                                    <li><strong>특성 정규화</strong>: MinMaxScaler를 활용한 정규화</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="implementation-item">
+                        <h3>2. 다중 모델 개발 및 비교</h3>
+                        <div class="content-grid text-only">
+                            <div class="text-content">
+                                <p>
+                                    다양한 이상치 탐지 모델을 개발하고 성능을 비교하여 최적의 조합을 찾았습니다.
+                                </p>
+                                <h4>모델 개발 과정:</h4>
+                                <ul>
+                                    <li><strong>IQR 모델</strong>: 통계적 임계값 기반 이상치 탐지</li>
+                                    <li><strong>Isolation Forest</strong>: 트리 기반 비지도 학습 이상치 탐지</li>
+                                    <li><strong>RRCF 모델</strong>: 스트리밍 데이터에 최적화된 이상치 탐지</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="implementation-item">
+                        <h3>3. 모델 결과 시각화</h3>
+                        <div class="content-grid text-only">
+                            <div class="text-content">
+                                <p>
+                                    세 가지 모델을 matplotlib 및 plotly로 시각화하여 보고 자료를 구성하였습니다.</br>
+                                    이 과정에서 세 모델에서 모두 공통으로 이상치로 탐지된 결제건을 확인할 수 있었고</br>
+                                    실시간 데이터 탐지를 도입하는 대신 이상치 탐지로 식별된 데이터를 기반으로 고객 관리 팀에서 결제 승인 금액을 관리하기로 결정하였습니다.
+                                </p>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2><i class="fas fa-chart-bar"></i> 결과 및 성과</h2>
+                <div class="results-grid">                    
+                    <div class="result-item">
+                        <div class="result-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>고객 관리 가이드라인 수립</h3>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2><i class="fas fa-lightbulb"></i> 학습 및 개선점</h2>
+                <div class="content-grid">
+                    <div class="text-content">
+                        <h3>주요 학습 내용</h3>
+                        <ul>
+                            <li><strong>이상치 탐지 기법</strong>: 다양한 이상치 탐지 알고리즘의 이해</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="project-footer">
+        <div class="container">
+            <p>&copy; 2025 데이터 분석가 포트폴리오. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="project-detail.js"></script>
+</body>
+</html> 

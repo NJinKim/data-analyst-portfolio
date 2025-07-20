@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 분석가 김남진의 포트폴리오</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="데이터 분석가 김남진의 포트폴리오입니다. SQL, Python, 머신러닝, 데이터 시각화 프로젝트를 포함합니다.">
+    <meta name="keywords" content="데이터분석가, 포트폴리오, 김남진, SQL, Python, 머신러닝, 데이터시각화">
+    <meta name="author" content="김남진">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="데이터 분석가 김남진의 포트폴리오">
+    <meta property="og:description" content="데이터 분석가 김남진의 포트폴리오입니다. SQL, Python, 머신러닝, 데이터 시각화 프로젝트를 포함합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://njinKim.github.io/data-analyst-portfolio/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+    
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome 아이콘 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 네비게이션 바 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <!-- 로고 또는 이름을 여기에 입력하세요 -->
+                <span>데이터 분석가 포트폴리오</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">홈</a></li>
+                <li><a href="#career" class="nav-link">경력</a></li>
+                <li><a href="#projects" class="nav-link">프로젝트</a></li>
+                <li><a href="#skills" class="nav-link">기술</a></li>
+                <li><a href="#education" class="nav-link">교육</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. 표지부 -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <!-- 좌측 상단 제목 -->
+            <div class="hero-title-section">
+                <h1 class="hero-main-title">데이터분석가 김남진, 포트폴리오</h1>
+            </div>
+            
+            <div class="hero-content">
+                <!-- 좌측: 프로필 이미지와 연락처 -->
+                <div class="hero-left">
+                    <div class="profile-image">
+                        <!-- <img src="your-profile-image.jpg" alt="프로필 이미지"> -->
+                        <div class="profile-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- 연락처 정보를 사진 바로 아래에 배치 -->
+                    <div class="hero-contact">
+                        <a href="mailto:ektlsns@gmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i> ektlsns@gmail.com
+                        </a>
+                        <a href="tel:+82-10-6383-2722" class="contact-link">
+                            <i class="fas fa-phone"></i> 010-6383-2722
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 우측: 소개 내용 -->
+                <div class="hero-right">
+                    <div class="hero-intro">
+                        <div class="hero-name-section">
+                            <h2 class="hero-name">김남진</h2>
+                            <h3 class="hero-position">데이터 분석가</h3>
+                        </div>
+                        
+                        <div class="hero-description">
+                            <p>
+                                조직 내 다양한 직군의 사람들과 협업하면서 데이터 기반 의사결정을 지원해왔습니다.
+                                SQL과 파이썬을 활용한 데이터 관리, 처리, 분석, 그리고 분석 자료의 정리 및 시각화에 전문성을 가지고 있습니다.
+                            </p>
+                            <p>
+                                데이터 분석에서 나온 인사이트가 새로운 비지니스로 이어지고 
+                                그것이 다음의 데이터 분석으로 이어지는 성장의 순환 고리를 믿습니다.<br>
+                                이를 위해 조직의 비즈니스 문제를 정확히 파악하여 소통 가능한 대안들을 제시하는 것을 목표로 하고 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 3. 목차부 -->
+    <section id="toc" class="toc">
+        <div class="container">
+            <h2 class="section-title">목차</h2>
+            <div class="toc-grid">
+                <a href="#career" class="toc-item">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>경력</h3>
+                    <p>업무 경험 및 성과</p>
+                </a>
+                <a href="#projects" class="toc-item">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>프로젝트</h3>
+                    <p>주요 프로젝트 및 성과</p>
+                </a>
+                <a href="#skills" class="toc-item">
+                    <i class="fas fa-code"></i>
+                    <h3>기술</h3>
+                    <p>프로그래밍 언어 및 도구</p>
+                </a>
+                <a href="#education" class="toc-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>교육</h3>
+                    <p>학력 및 자격증</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 경력 -->
+    <section id="career" class="career">
+        <div class="container">
+            <h2 class="section-title">경력</h2>
+            <div class="timeline">
+                <!-- 경력 항목을 여기에 추가하세요 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - 현재</div>
+                    <div class="timeline-content">
+                        <h3>데이터 분석가</h3>
+                        <h4>케어네이션</h4>
+                        <ul>
+                            <li>데이터 기반 의사결정 지원</li>
+                            <li>여러 직무의 사람들과 협업</li>
+                            <li>조직 지표 관리</li>
+                            <li>데이터 마트 구성 및 관리</li>
+                            <li>데이터 분석 및 시각화</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2016 - 2018</div>
+                    <div class="timeline-content">
+                        <h3>연구보조원</h3>
+                        <h4>서강대학교 아트 앤 테크놀로지</h4>
+                        <ul>
+                            <li>전시 관람객 경험 분석</li>
+                            <li>분석 결과 정리 및 논문에 들어갈 수 있는 형태로 시각화</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2016 - 2017</div>
+                    <div class="timeline-content">
+                        <h3>연구보조원</h3>
+                        <h4>서강대학교 사회학과</h4>
+                        <ul>
+                            <li>설문조사 문항 구성 및 설문조사 수행</li>
+                            <li>설문조사 데이터에 대한 회귀분석을 수행하여 논문 발표</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 프로젝트 -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">프로젝트</h2>
+            <div class="projects-grid">
+                <!-- 프로젝트 항목을 여기에 추가하세요 -->
+                <div class="project-card" data-project="project1">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>상세보기</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>적정 가격 계산 모델 개발</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Statsmodels</span>
+                            <span class="tech-tag">OLS Regression</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-project="project2">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>상세보기</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>예측 모델 개발</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">LSTM</span>
+                            <span class="tech-tag">GLMs Regression</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-project="project3">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>상세보기</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>데이터 마트 구성 및 관리</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Airflow</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-project="project4">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>상세보기</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>이상치 탐지 모델 개발</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Isolation Forest</span>
+                            <span class="tech-tag">RRCF</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-project="project5">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-spider"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>상세보기</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>크롤러 개발</h3>
+                        <div class="project-tech">                            
+                            <span class="tech-tag">Selenium</span>
+                            <span class="tech-tag">BeautifulSoup</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-project="project6">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>상세보기</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>기타 프로젝트</h3>
+                        <div class="project-tech">
+                            <span class="tech-tag">Tableau</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Folium</span>
+                            <span class="tech-tag">Funnel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 프로젝트 상세보기 안내 -->
+            <div class="project-notice">
+                <p><i class="fas fa-info-circle"></i> 프로젝트를 클릭하면 상세 내용을 확인할 수 있습니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. 사용 가능 기술 -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">기술</h2>
+            
+            <!-- 프로그래밍 언어 -->
+            <div class="skills-category">
+                <h3>프로그래밍 언어</h3>
+                <div class="skills-list">
+                    <div class="skill-card">
+                        <div class="skill-left">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Python</h4>
+                                <span class="skill-level">상</span>
+                            </div>
+                        </div>
+                        <div class="skill-right">
+                            <div class="skill-description">
+                                <p><strong>경험:</strong> 머신러닝 및 딥러닝을 활용한 데이터 분석, 시각화 등 다양한 프로젝트에서 활용</p>
+                                <p><strong>주요 활용:</strong> Pandas, Numpy, Scikit-learn, TensorFlow, Airflow 등</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-left">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>SQL</h4>
+                                <span class="skill-level">상</span>
+                            </div>
+                        </div>
+                        <div class="skill-right">
+                            <div class="skill-description">
+                                <p><strong>경험:</strong> 복잡한 쿼리 작성, 데이터 마트 구성, 성능 최적화</p>
+                                <p><strong>주요 활용:</strong> 테이블 생성, 업데이트, 데이터 추출 등</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 데이터 분석 툴 -->
+            <div class="skills-category">
+                <h3>데이터 분석 툴</h3>
+                <div class="skills-list">
+                    <div class="skill-card">
+                        <div class="skill-left">
+                            <div class="skill-icon">
+                                <i class="fas fa-table"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Pandas</h4>
+                                <span class="skill-level">상</span>
+                            </div>
+                        </div>
+                        <div class="skill-right">
+                            <div class="skill-description">
+                                <p><strong>경험:</strong> 대용량 데이터 처리, 데이터 클리닝, 집계 분석</p>
+                                <p><strong>주요 활용:</strong> 데이터 전처리, 피벗 테이블, 시계열 분석</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-left">
+                            <div class="skill-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>NumPy</h4>
+                                <span class="skill-level">중</span>
+                            </div>
+                        </div>
+                        <div class="skill-right">
+                            <div class="skill-description">
+                                <p><strong>경험:</strong> 수치 계산, 배열 조작, 연산</p>
+                                <p><strong>주요 활용:</strong> 수학적 연산, 머신러닝 전처리</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-left">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Scikit-learn</h4>
+                                <span class="skill-level">중상</span>
+                            </div>
+                        </div>
+                        <div class="skill-right">
+                            <div class="skill-description">
+                                <p><strong>경험:</strong> 분류, 회귀, 클러스터링 모델 개발</p>
+                                <p><strong>주요 활용:</strong> 머신러닝 모델링, 모델 평가, 하이퍼파라미터 튜닝</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-left">
+                            <div class="skill-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>TensorFlow</h4>
+                                <span class="skill-level">중</span>
+                            </div>
+                        </div>
+                        <div class="skill-right">
+                            <div class="skill-description">
+                                <p><strong>경험:</strong> 딥러닝 모델 구현, 신경망 설계</p>
+                                <p><strong>주요 활용:</strong> LSTM, 자연어 처리 모델 개발</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 시각화 도구 -->
+            <div class="skills-category">
+                <h3>시각화 도구</h3>
+                <div class="skills-list">
+                    <div class="skill-card">
+                        <div class="skill-left">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Tableau</h4>
+                                <span class="skill-level">중</span>
+                            </div>
+                        </div>
+                        <div class="skill-right">
+                            <div class="skill-description">
+                                <p><strong>경험:</strong> 대시보드 구성, 실시간 데이터 시각화, 의사결정 지원</p>
+                                <p><strong>주요 활용:</strong> KPI 대시보드, 인터랙티브 차트</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-left">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Matplotlib</h4>
+                                <span class="skill-level">중상</span>
+                            </div>
+                        </div>
+                        <div class="skill-right">
+                            <div class="skill-description">
+                                <p><strong>경험:</strong> 커스텀 차트 생성, 데이터 시각화</p>
+                                <p><strong>주요 활용:</strong> 정적 차트, 리포트용 시각화</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-left">
+                            <div class="skill-icon">
+                                <i class="fas fa-chart-area"></i>
+                            </div>
+                            <div class="skill-info">
+                                <h4>Plotly</h4>
+                                <span class="skill-level">중</span>
+                            </div>
+                        </div>
+                        <div class="skill-right">
+                            <div class="skill-description">
+                                <p><strong>경험:</strong> 인터랙티브 차트, 지리 정보 시각화</p>
+                                <p><strong>주요 활용:</strong> 인터랙티브 차트</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. 기타 기술 -->
+    <section id="other-skills" class="other-skills">
+        <div class="container">
+            <h2 class="section-title">기타 기술</h2>
+            <div class="other-skills-grid">
+                <!-- 어학 능력 -->
+                <div class="other-skills-category">
+                    <h3>어학 능력</h3>
+                    <div class="language-item">
+                        <span class="language-name">영어</span>
+                        <span class="language-level">GRE 332점</span>
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">영어</span>
+                        <span class="language-level">TOEFL 100점 (2024년 만료)</span>
+                    </div>
+                </div>
+                
+                <!-- 커뮤니케이션 능력 -->
+                <div class="other-skills-category">
+                    <h3>커뮤니케이션 능력</h3>
+                    <div class="communication-item">
+                        <i class="fas fa-users"></i>
+                        <span>팀 협업 및 리더십</span>
+                    </div>
+                    <div class="communication-item">
+                        <i class="fas fa-presentation"></i>
+                        <span>데이터 스토리텔링</span>
+                    </div>
+                </div>
+
+                <!-- 기타 능력 -->
+                <div class="other-skills-category">
+                    <h3>기타 능력</h3>
+                    <div class="communication-item">
+                        <i class="fas fa-users"></i>
+                        <span>사무 자동화</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. 교육 -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">교육</h2>
+            
+            <!-- 학력 -->
+            <div class="education-category">
+                <h3>학력</h3>
+                <div class="education-item">
+                    <div class="education-date">2016 - 2018</div>
+                    <div class="education-content">
+                        <h4>서강대학교</h4>
+                        <p>사회학과 석사</p>
+                        <p>주요 과목: 사회통계학연습</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-date">2012 - 2016</div>
+                    <div class="education-content">
+                        <h4>서강대학교</h4>
+                        <p>철학과, 사회학과 학사</p>
+                        <p>주요 과목: 사회조사방법론, 사회통계학</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 관련 교육 -->
+            <div class="education-category">
+                <h3>관련 교육</h3>
+                <div class="education-item">
+                    <div class="education-date">2023</div>
+                    <div class="education-content">
+                        <h4>학점 이수</h4>
+                        <p>선형대수(3학점) - 한국방송통신대학교</p>
+                        <p>공업수학(3학점) - 한양사이버대학교</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-date">2022</div>
+                    <div class="education-content">
+                        <h4>AI Bootcamp</h4>
+                        <p>코드스테이츠 AI Bootcamp - 6개월 과정</p>
+                        <p>머신러닝, 딥러닝, 데이터 엔지니어링 과정 수료</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 자격증 -->
+            <div class="education-category">
+                <h3>자격증</h3>
+                <div class="certification-grid">
+                    <div class="certification-item">
+                        <i class="fas fa-certificate"></i>
+                        <h4>빅데이터분석기사</h4>
+                        <p>한국산업인력공단</p>
+                        <p>2024년 취득</p>
+                    </div>
+                    <div class="certification-item">
+                        <i class="fas fa-certificate"></i>
+                        <h4>ADsP(데이터분석 준전문가)</h4>
+                        <p>한국데이터산업진흥원</p>
+                        <p>2023년 취득</p>
+                    </div>
+                    <div class="certification-item">
+                        <i class="fas fa-certificate"></i>
+                        <h4>SQL 개발자(SQLD)</h4>
+                        <p>한국데이터산업진흥원</p>
+                        <p>2023년 취득</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 김남진 포트폴리오. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

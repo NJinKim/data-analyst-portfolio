@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>크롤러 개발 - 포트폴리오</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <!-- Font Awesome 아이콘 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 홈으로 돌아가기 버튼 -->
+    <div class="back-to-home">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-home"></i>
+            <span>홈으로</span>
+        </a>
+    </div>
+
+    <!-- 맨 위로 이동 버튼 -->
+    <div class="scroll-to-top">
+        <a href="#" class="scroll-to-top-btn">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- 우측 프로젝트 네비게이션 -->
+    <nav class="project-nav">
+        <ul class="project-nav-list">
+            <li class="project-nav-item">
+                <a href="#project1" class="project-nav-link">
+                    <i class="fas fa-newspaper"></i>
+                    <span>1. 뉴스</span>
+                </a>
+            </li>
+            <li class="project-nav-item">
+                <a href="#project2" class="project-nav-link">
+                    <i class="fas fa-blog"></i>
+                    <span>2. 블로그/카페</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 프로젝트 헤더 -->
+    <header class="project-header">
+        <div class="container">
+            <div class="project-title">
+                <h1>크롤러 개발</h1>
+                <p class="project-subtitle">뉴스 크롤링 및 블로그/카페 크롤링을 통한 시장 조사 및 트렌드 분석 시스템</p>
+            </div>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>2025.02 - 2025.06</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-users"></i>
+                    <span>개인 프로젝트</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 프로젝트 내용 -->
+    <main class="project-content">
+        <div class="container">
+            
+            <!-- 목차 섹션 -->
+            <section class="project-section">
+                <h2><i class="fas fa-list"></i> 목차</h2>
+                <div class="toc-grid">
+                    <a href="#project1" class="toc-item">
+                        <h3>1. 뉴스 크롤링 시스템</h3>
+                    </a>
+                    <a href="#project2" class="toc-item">
+                        <h3>2. 블로그/카페 크롤링 시스템</h3>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 프로젝트 1: 뉴스 크롤링 -->
+            <section id="project1" class="project-section">
+                <h2><i class="fas fa-newspaper"></i> 1: 뉴스 크롤링 시스템</h2>
+                
+                <!-- 프로젝트 1 개요 -->
+                <div class="content-grid text-only">
+                    <div class="text-content">
+                        <h3>배경 및 목적</h3>
+                            투자사 및 잠재 고객들에게 간병 시장에서의 전문적인 이미지 구축을 자체 데이터를 활용해 위해 월간 리포트를 발간해왔습니다.</br>
+                            이런 전략의 연장선에서 간병 시장 전체의 트렌드를 제공함으로써 회사의 전문성을 강화하고자 하였습니다.</br>
+                            시장 트랜드 조사를 하는 방법으로는 관련 뉴스 기사를 분석하는 방법이 좋다고 판단하여 뉴스 크롤러를 만들었습니다. 
+                    </div>
+                </div>
+
+                <!-- 프로젝트 1 사용 기술 -->
+                <div class="tech-stack">
+                    <div class="tech-category">
+                        <h3>웹 크롤링</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Selenium</span>
+                            <span class="tech-item">BeautifulSoup</span>
+                            <span class="tech-item">Requests</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>텍스트 분석</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Scikit-learn</span>
+                            <span class="tech-item">KiWi</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>데이터 저장</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>시각화</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Matplotlib</span>
+                            <span class="tech-item">NetworkX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 1 구현 내용 -->
+                <div class="implementation-grid">
+                    <div class="implementation-item">
+                        <h3>크롤링 모듈 개발</h3>
+                        <div class="content-grid text-only">
+                            <div class="text-content">
+                                <ul>
+                                    <li><strong>키워드 기반 뉴스 수집</strong>: 간병, 돌봄 등의 관련 키워드를 사용해 API에 뉴스 정보 요청</li>
+                                    <li><strong>자동 데이터 정제</strong>: 중복 제거, 텍스트 정규화</li>
+                                    <li><strong>데이터베이스 저장</strong>: MySQL을 활용한 구조화된 데이터 저장</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="implementation-item">
+                        <h3>분석 및 리포트 생성</h3>
+                        <div class="content-grid">
+                            <div class="text-content">
+                                <ul>
+                                    <li><strong>트렌드 분석</strong>: 키워드 빈도 분석 및 네트워크 그래프 생성</li>
+                                    <li><strong>시각화</strong>: 월간 리포트의 '돌봄 트렌드' 챕터에 시각화 자료 추가</li>
+                                </ul>
+                            </div>
+                            <div class="image-content" style="margin-top: -60px;">
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <img src="keywords_network.png" alt="주요 키워드 네트워크" style="width: 100%; max-width: 400px; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                    <p style="text-align: center; margin-top: 8px; font-size: 0.8rem; color: #888; line-height: 1.2;">
+                                        출처: 케어네이션 블로그<br>
+                                        <a href="https://blog.naver.com/carenation/223812729054?photoView=5" target="_blank" style="color: #3498db; text-decoration: none;">@https://blog.naver.com/carenation/223812729054?photoView=5</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 1 결과 및 성과 -->
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>트렌드 분석</h3>
+                        <p class="result-desc">월간 트렌드 리포트 자동 생성</p>
+                        <p class="result-desc">키워드 빈도 분석</p>
+                        <p class="result-desc">네트워크 형태로 시각화</p>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>데이터 수집</h3>
+                        <p class="result-desc">구조화된 뉴스 데이터 저장</p>
+                        <p class="result-desc">자동화된 데이터 정제</p>
+                    </div>
+                </div>
+            </br></br>
+                <!-- 프로젝트 1 학습 및 개선점 -->
+                <div class="content-grid">
+                    <div class="text-content">
+                        <h3>학습 내용</h3>
+                        <ul>
+                            <li><strong>웹 크롤링</strong>: Selenium과 BeautifulSoup을 활용한 동적 웹페이지 크롤링</li>
+                            <li><strong>데이터 정제</strong>: 텍스트 데이터 전처리</li>
+                            <li><strong>데이터 시각화</strong>: 키워드 데이터의 상관분석을 활용한 네트워크 형태 시각화</li>
+                        </ul>
+                    </div>
+                    <div class="text-content">
+                        <h3>향후 개선 방향</h3>
+                        <ul>
+                            <li>감정 분석 기능 등을 추가하여 콘텐츠 다각화</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 프로젝트 2: 블로그/카페 크롤링 -->
+            <section id="project2" class="project-section">
+                <h2><i class="fas fa-blog"></i> 2: 블로그/카페 크롤링 시스템</h2>
+                
+                <!-- 프로젝트 2 개요 -->
+                <div class="content-grid text-only">
+                    <div class="text-content">
+                        <h3>프로젝트 개요</h3>
+                        <p>
+                            회사에서 새로운 서비스를 출시하였습니다.</br>
+                            서비스의 수익 창출을 위해 우선 서비스를 홍보할 수 있는 잠재적 고객층을 발굴할 필요성이 제기되었고,</br>
+                            블로그와 카페 게시글을 수집하여 잠재적인 고객층의 특성 또는 수요 발생 상황을 정의하고자 하였습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 2 사용 기술 -->
+                <div class="tech-stack">
+                    <div class="tech-category">
+                        <h3>웹 크롤링</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Selenium</span>
+                            <span class="tech-item">BeautifulSoup</span>
+                            <span class="tech-item">Requests</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>데이터 처리</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Pandas</span>
+                            <span class="tech-item">NumPy</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>텍스트 분석</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">KiWi</span>
+                            <span class="tech-item">Scikit-learn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 2 구현 내용 -->
+                <div class="implementation-grid">
+                    <div class="implementation-item">
+                        <h3>크롤링 시스템 구축</h3>
+                        <div class="content-grid text-only">
+                            <div class="text-content">
+                                <ul>
+                                    <li><strong>다중 플랫폼 수집</strong>: 네이버 블로그, 카페 게시글 수집</li>
+                                    <li><strong>IP 차단 방지</strong>: 지연 시간 및 프록시 설정</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="implementation-item">
+                        <h3>데이터 분석 및 보고</h3>
+                        <div class="content-grid text-only">
+                            <div class="text-content">
+                                <ul>
+                                    <li><strong>형태소 관리</strong>: raw data 검토를 통한 형태소 추가 및 불용어 추가</li>
+                                    <li><strong>키워드 추출</strong>: 게시글에서 주요 관심사 및 니즈 키워드 추출</li>
+                                    <li><strong>수요 발생 상황 파악</strong>: 게시글 내용 분석을 통해 잠재 고객층이 발생되는 시나리오 정리</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 2 결과 및 성과 -->
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>수요 발생 분석</h3>
+                        <p class="result-desc">수요 발생 상황 정의</p>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>키워드 분석</h3>
+                        <p class="result-desc">주요 관심사 키워드 추출</p>
+                    </div>
+                </div>
+            </br></br>
+                <!-- 프로젝트 2 학습 및 개선점 -->
+                <div class="content-grid">
+                    <div class="text-content">
+                        <h3>학습 내용</h3>
+                        <ul>
+                            <li><strong>다중 플랫폼 크롤링</strong>: 블로그, 카페 등 다양한 플랫폼 크롤링</li>
+                            <li><strong>텍스트 분석</strong>: 자연어 처리를 통한 키워드 추출</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+    </main>
+
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="project-footer">
+        <div class="container">
+            <p>&copy; 2025 데이터 분석가 포트폴리오. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="project-detail.js"></script>
+</body>
+</html> 

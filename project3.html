@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 마트 구성 및 업데이트 관리 - 포트폴리오</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <!-- Font Awesome 아이콘 라이브러리 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 홈으로 돌아가기 버튼 -->
+    <div class="back-to-home">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-home"></i>
+            <span>홈으로</span>
+        </a>
+    </div>
+
+    <!-- 맨 위로 이동 버튼 -->
+    <div class="scroll-to-top">
+        <a href="#" class="scroll-to-top-btn">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- 프로젝트 헤더 -->
+    <header class="project-header">
+        <div class="container">
+            <div class="project-title">
+                <h1>데이터 마트 구성 및 관리</h1>
+                <p class="project-subtitle">대시보드 관리 및 정산을 위한 데이터 마트 구성</p>
+            </div>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>2023.01 - </span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-users"></i>
+                    <span>개인 프로젝트</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 프로젝트 내용 -->
+    <main class="project-content">
+        <div class="container">
+            
+            <!-- 프로젝트 개요 -->
+            <section class="project-section">
+                <h2><i class="fas fa-info-circle"></i> 프로젝트 개요</h2>
+                <div class="content-grid text-only">
+                    <div class="text-content">
+                        <h3>배경 및 목표</h3>
+                        <p>
+                            플랫폼 서비스를 운영하는 과정에서 대시보드 및 정산 관련 몇 가지 문제가 발생했습니다.
+                        </p>
+                        <p>
+                            첫째, 대시보드 쿼리가 전체 기간의 데이터를 가져온 후 계산하는 방식으로 구성되어 있어, 불러오는 속도가 느리고 서버에 부담을 줄 위험이 있었습니다.</br>
+                            둘째, B2B 거래를 하고 있던 거래에 대한 정리된 정산 자료가 없어, 정산을 할 때마다 정산 담당 팀에서 데이터 추출을 요청해야 하는 절차상의 문제가 있었습니다.</br>
+                            마지막으로, 유저가 결제 금액을 취소하는 경우 해당 주문건에 대한 지급 스케쥴러가 중단되는 오류가 있었습니다.</br>
+                            이로 인해 취소 후 지급 건에 대해서는 수동으로 금액을 지급하면서 휴먼 에러가 발생해 재무제표 상의 금액과 다른 금액이 유저에게 지급되는 문제가 발생하였습니다.
+                        </p>
+                        <p>
+                            이 문제들을 해결하기 위해 대시보드 및 정산 관련 데이터 마트를 구성하고자 하였습니다. 
+                            구체적으로는 쿼리 개선 및 Apache Airflow를 활용한 자동화된 파이프라인을 구축하여 데이터 업데이트 프로세스를 표준화하고 
+                            운영 효율성을 향상시키는 것이 목표였습니다.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 기술 스택 -->
+            <section class="project-section">
+                <h2><i class="fas fa-tools"></i> 사용 기술</h2>
+                <div class="tech-stack">
+                    <div class="tech-category">
+                        <h3>데이터 파이프라인</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Apache Airflow</span>
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">SQL</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>데이터베이스</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">SQL</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>데이터 처리</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Pandas</span>
+                            <span class="tech-item">Numpy</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 구현 내용 -->
+            <section class="project-section">
+                <h2><i class="fas fa-code"></i> 구현 내용</h2>
+                <div class="implementation-grid">
+                    <div class="implementation-item">
+                        <h3>1. Airflow DAG 설계</h3>
+                        <div class="content-grid text-only">
+                            <div class="text-content">
+                                <p>
+                                    일일 및 월간 데이터 업데이트를 위한 DAG를 설계했습니다.</br>
+                                    각 DAG는 데이터 수집, 정제, 변환, 적재 단계로 구성하였고</br>
+                                    업데이트가 완료되면 사내 메신저로 알림을 보내도록 설정하였습니다. 
+                                </p>
+                                <ul>
+                                    <li>일일 DAG: 매일 새벽 5시 실행</li>
+                                    <li>월간 DAG: 매월 1~7일 새벽 5시 30분 실행</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="implementation-item">
+                        <h3>2. 데이터 마트 설계</h3>
+                        <div class="content-grid text-only">
+                            <div class="text-content">
+                                <p>
+                                    foreign key를 추가하여 데이터 간의 관계를 표현하였고,</br>
+                                    정산에 필요한 지표들을 효율적으로 조회할 수 있도록 집계 테이블을 추가하였습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <!-- 결과 및 성과 -->
+            <section class="project-section">
+                <h2><i class="fas fa-chart-bar"></i> 결과 및 성과</h2>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>처리 시간 단축</h3>
+                        <p class="result-number">97.9%</p>
+                        <p class="result-desc">4시간 → 5분</p>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>운영 인력 절약</h3>
+                        <p class="result-number">83.3%</p>
+                        <p class="result-desc">3명 → 0.5명</p>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>데이터 정확성</h3>
+                        <p class="result-number">99.9%</p>
+                        <p class="result-desc">지속적 유지</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 학습 및 개선점 -->
+            <section class="project-section">
+                <h2><i class="fas fa-lightbulb"></i> 학습 및 개선점</h2>
+                <div class="content-grid">
+                    <div class="text-content">
+                        <h3>주요 학습 내용</h3>
+                        <ul>
+                            <li><strong>Airflow DAG 설계</strong>: 복잡한 의존성 관리와 실패 처리 전략</li>
+                            <li><strong>데이터 파이프라인 최적화</strong>: 병렬 처리와 리소스 효율성</li>
+                        </ul>
+                    </div>
+                    <div class="text-content">
+                        <h3>향후 개선 방향</h3>
+                        <ul>
+                            <li>어플리케이션 기능 개선 후 데이터 마트의 데이터를 운영 서버로 이관</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="project-footer">
+        <div class="container">
+            <p>&copy; 2025 데이터 분석가 포트폴리오. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="project-detail.js"></script>
+</body>
+</html> 

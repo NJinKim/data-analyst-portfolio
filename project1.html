@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>적정 가격 계산 알고리즘 개발 - 포트폴리오</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="back-to-home">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-home"></i>
+            <span>홈으로</span>
+        </a>
+    </div>
+
+    <!-- 맨 위로 이동 버튼 -->
+    <div class="scroll-to-top">
+        <a href="#" class="scroll-to-top-btn">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <header class="project-header">
+        <div class="container">
+            <div class="project-title">
+                <h1>적정 가격 계산 알고리즘 개발</h1>
+                <p class="project-subtitle">OLS Regression을 활용한 적정 가격 예측 모델 개선 및 시장 변화 반영</p>
+            </div>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>2023.06 - 2023.11</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-users"></i>
+                    <span>기획팀-개발팀 협업 프로젝트</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="project-content">
+        <div class="container">
+            
+            <section class="project-section">
+                <h2><i class="fas fa-info-circle"></i> 프로젝트 개요</h2>
+                <div class="content-grid text-only">
+                    <div class="text-content">
+                        <h3>배경 및 목적</h3>
+                        <p>
+                            간병인 매칭 플랫폼 '케어네이션'에서는 간병을 필요로 하는 유저가 구인 공고를 올리면 간병인이 원하는 금액으로 지원하는 자유 입찰 방식으로 운영됩니다.</br>
+                            이때, 유저들의 선택을 용이하게 하기 위해, 환자 상태에 따른 적절한 간병비를 계산하여 제시하는 기능을 도입해왔습니다.
+                        </p>
+                        <p>
+                            하지만 기존 적정 간병비 계산 모델이 실제 매칭 가격과 간극을 나타내게 되었고, 서비스 또한 개편되면서 적정 간병비에 고려할 수 있는 특성들이 추가되었습니다.</br>
+                            또한 시장 금액이 지속적으로 상승하여, 이에 대한 가이드라인을 다시 제시할 필요가 있었습니다.
+                        </p>
+                        <p>
+                            프로젝트의 목표는 크게 두 가지였습니다:</br>
+                            첫째, 새롭게 추가된 특성들을 고려하여 실제 매칭 가격에 근접한 금액을 예측하는 모델을 개발하되,</br>
+                            둘째, 환자의 어떤 특성이 예측값에 영향을 미치는지를 직관적으로 확인 가능하게 만들기.
+                        </p>        
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2><i class="fas fa-tools"></i> 사용 기술</h2>
+                <div class="tech-stack">
+                    <div class="tech-category">
+                        <h3>사용 언어</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">SQL</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>데이터 분석</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Statsmodels</span>
+                            <span class="tech-item">OLS Regression</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>시각화</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Matplotlib</span>
+                            <span class="tech-item">Excel</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2><i class="fas fa-sitemap"></i> 모델 개발 과정</h2>
+                <div class="implementation-grid">
+                    <div class="implementation-item">
+                        <h3>1. 데이터 전처리 및 특성 엔지니어링</h3>
+                        <div class="content-grid text-only">
+                            <div class="text-content">
+                                <p>
+                                    본격적인 분석에 앞서 데이터 전처리를 진행했습니다.
+                                </p>
+                                <h4>전처리 과정:</h4>
+                                <ul>
+                                    <li><strong>이상치 탐지</strong>: IQR 및 고객 응대 자료 기반 이상치 제거</li>
+                                    <li><strong>특성 타입 변환</strong>: 텍스트 데이터를 범주형 또는 Boolean 형태로 변환</li>
+                                    <li><strong>특성 스케일링</strong>: StandardScaler를 활용한 정규화</li>
+                                    <li><strong>공선성 검증</strong>: VIF(Variance Inflation Factor) 분석을 활용해 특성 삭제 및 통합</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="implementation-item">
+                        <h3>2. OLS Regression 모델 개발</h3>
+                        <div class="content-grid text-only">
+                            <div class="text-content">
+                                <p>
+                                    다양한 특성 조합을 테스트하여 최적의 OLS Regression 모델을 개발했습니다.
+                                </p>
+                                <h4>모델 개발 과정:</h4>
+                                <ul>
+                                    <li><strong>특성 선택</strong>: Stepwise selection</li>
+                                    <li><strong>모델 학습</strong>: OLS Regression 파라미터 최적화</li>
+                                    <li><strong>성능 평가</strong>: RMSE, R² 등 다양한 지표 활용</li>
+                                    <li><strong>교차 검증</strong>: K-fold cross validation으로 모델 안정성 검증</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="implementation-item">
+                        <h3>3. 모델 단순화 및 서비스 적용</h3>
+                        <div class="content-grid text-only">
+                            <div class="text-content">
+                                <p>
+                                    실제 서비스에도 손쉽게 적용 가능하고 직관적으로도 이해 가능하도록</br> 
+                                    모델의 회귀계수를 기반으로 특성별 가격을 가격 단위로 변환하는 자료를 만들어 전달했습니다.
+                                </p>
+                                <h4>적용 과정:</h4>
+                                <ul>
+                                    <li><strong>모델 단순화</strong>: 복잡한 특성 조합을 단순한 형태로 변환</li>
+                                    <li><strong>자료 정리</strong>: 엑셀에 정리 자료를 만들어서 기획팀 및 개발팀에 전달</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2><i class="fas fa-chart-bar"></i> 결과 및 성과</h2>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-icon">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <h3>지원 금액/매칭 금액과 적정 간병비의 차이 감소</h3>
+                        <p class="result-number">-47% / -24%</p>
+                        <p class="result-desc">실제 수요에 맞도록 판매자 의사결정 개선</p>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon">
+                            <i class="fas fa-arrow-down"></i>
+                        </div>
+                        <h3>지원 금액 감소 및 매칭 금액 상승</h3>
+                        <p class="result-number">-24% / +14%</p>
+                        <p class="result-desc">유저 만족도 및 회사 수수료 수익 증가</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2><i class="fas fa-lightbulb"></i> 학습 및 개선점</h2>
+                <div class="content-grid">
+                    <div class="text-content">
+                        <h3>주요 학습 내용</h3>
+                        <ul>
+                            <li><strong>선형 회귀 모델링</strong>: OLS Regression의 이해와 최적화</li>
+                            <li><strong>특성 선택</strong>: 공선성 검증 및 특성 중요도 분석</li>
+                            <li><strong>비즈니스 적용</strong>: 머신러닝 모델의 실제 서비스 적용</li>
+                        </ul>
+                    </div>
+                    <div class="text-content">
+                        <h3>향후 개선 방향</h3>
+                        <ul>
+                            <li>더 정교한 비선형 모델(랜덤 포레스트, XGBoost) 적용 검토</li>
+                            <li>실시간 시장 데이터 반영을 위한 모델 업데이트 자동화</li>                            
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="project-footer">
+        <div class="container">
+            <p>&copy; 2025 데이터 분석가 포트폴리오. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="project-detail.js"></script>
+</body>
+</html> 

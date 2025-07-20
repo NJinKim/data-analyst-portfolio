@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예측 모델 개발 - 포트폴리오</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="back-to-home">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-home"></i>
+            <span>홈으로</span>
+        </a>
+    </div>
+
+    <!-- 맨 위로 이동 버튼 -->
+    <div class="scroll-to-top">
+        <a href="#" class="scroll-to-top-btn">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- 우측 프로젝트 네비게이션 -->
+    <nav class="project-nav">
+        <ul class="project-nav-list">
+            <li class="project-nav-item">
+                <a href="#project1" class="project-nav-link">
+                    <i class="fas fa-brain"></i>
+                    <span>1. LSTM</span>
+                </a>
+            </li>
+            <li class="project-nav-item">
+                <a href="#project2" class="project-nav-link">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>2. Zip Regression</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="project-header">
+        <div class="container">
+            <div class="project-title">
+                <h1>예측 모델 개발</h1>
+                <p class="project-subtitle">Zero-inflated Poisson Regression, LSTM을 활용한 지원수 및 승인 금액 예측 모델 개발</p>
+            </div>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>2023.07 - 2023.12</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-users"></i>
+                    <span>개인 프로젝트</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="project-content">
+        <div class="container">
+            
+            <!-- 목차 섹션 -->
+            <section class="project-section">
+                <h2><i class="fas fa-list"></i> 목차</h2>
+                <div class="toc-grid">
+                    <a href="#project1" class="toc-item">
+                        <h3>1. LSTM 승인 금액 예측 모델</h3>
+                    </a>
+                    <a href="#project2" class="toc-item">
+                        <h3>2. Zero-Inflated Poisson Regression 지원수 예측</h3>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 프로젝트 1: LSTM 승인 금액 예측 -->
+            <section id="project1" class="project-section">
+                <h2><i class="fas fa-brain"></i> 1: LSTM 승인 금액 예측 모델</h2>
+                
+                <!-- 프로젝트 1 개요 -->
+                <div class="content-grid text-only">
+                    <div class="text-content">
+                        <h3>배경 및 목적</h3>
+                        <p>
+                            투자사 보고 자료 및 재정 계획 수립을 위해 유저들의 차월 결제 금액이 필요했습니다.</br>
+                            데이터가 쌓이는 모든 기간의 결제 승인 금액을 사용하여 최신 자료에 보다 가중치를 부여해서 학습하는 LSTM 모델을 채택하여 학습했습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 1 사용 기술 -->
+                <div class="tech-stack">
+                    <div class="tech-category">
+                        <h3>사용 언어</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">SQL</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>딥러닝</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">TensorFlow</span>
+                            <span class="tech-item">Keras</span>
+                            <span class="tech-item">LSTM</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>데이터 처리</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Pandas</span>
+                            <span class="tech-item">NumPy</span>
+                            <span class="tech-item">Scikit-learn</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>시각화</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Matplotlib</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 1 구현 내용 -->
+                <div class="implementation-grid">
+                    <div class="implementation-item">
+                        <h3>데이터 전처리</h3>
+                        <div class="content-grid text-only">
+                            <div class="text-content">
+                                <ul>
+                                    <li><strong>연휴/공휴일 보정</strong>: 해당 기간 동안 승인 금액이 감소하는 것을 고려하여 데이터 보정</li>
+                                    <li><strong>시계열 정규화</strong>: MinMaxScaler를 활용한 데이터 정규화</li>
+                                    <li><strong>시퀀스 생성</strong>: 과거 데이터를 활용한 입력 시퀀스 구성</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="implementation-item">
+                        <h3>모델 최적화</h3>
+                        <div class="content-grid text-only">
+                            <div class="text-content">
+                                <ul>
+                                    <li><strong>Grid Search</strong>: 하이퍼파라미터 탐색 및 최적화</li>
+                                    <li><strong>평가 지표</strong>: RMSE 지표 활용</li>
+                                    <li><strong>앙상블 접근</strong>: 최적 후보 모델들 상위 4개를 선정하여 중위값 기반 예측 범위 산출</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 1 결과 및 성과 -->
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3>승인 금액 예측</h3>
+                        <p class="result-number">약 70%</p>
+                        <p class="result-desc">월간 승인 금액 오차범위 내 일치율</p>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>비즈니스 활용</h3>
+                        <p class="result-desc">투자사 보고 지원</p>
+                        <p class="result-desc">지출 계획 수립에 활용</p>
+                    </div>
+                </div>
+            </br></br>
+                <!-- 프로젝트 1 학습 및 개선점 -->
+                <div class="content-grid">
+                    <div class="text-content">
+                        <h3>학습 내용</h3>
+                        <ul>
+                            <li><strong>딥러닝</strong>: LSTM 네트워크 설계 및 최적화</li>
+                            <li><strong>시계열 분석</strong>: 순차적 데이터 처리 방법</li>
+                        </ul>
+                    </div>
+                    <div class="text-content">
+                        <h3>향후 개선 방향</h3>
+                        <ul>
+                            <li>플랫폼 외부 요인을 고려할 수 있는 특성 공학</li>
+                            <li>결제 승인 금액 외 다른 특성 추가 학습</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 프로젝트 2: Zero-Inflated Poisson Regression -->
+            <section id="project2" class="project-section">
+                <h2><i class="fas fa-chart-bar"></i> 2: Zero-Inflated Poisson Regression 지원수 예측</h2>
+                
+                <!-- 프로젝트 2 개요 -->
+                <div class="content-grid text-only">
+                    <div class="text-content">
+                        <h3>배경 및 목적</h3>
+                        <p>
+                            간병 시장의 경우, 한 번 매칭이 되면 다음 매칭 기간까지 지원을 하지 않는 경우가 많습니다.</br>
+                            이러한 시장 특성상, 간병인의 지원수는 정규 분포를 따르지 않고 0이 과잉 분포되어 있는 형태입니다.
+                        </p>
+                        <p>
+                            기존 모델인 선형 회귀 및 로지스틱 회귀 모델로는 간병인의 지원 수 및 지원 여부에 대한 예측 정확도가 많이 떨어졌습니다.</br>
+                            기존 모델의 한계를 극복하기 위해, 시장의 특성을 반영하여 영-과잉 포아송 모델(Zero-inflated Poisson Regression)을 사용하여 지원수를 예측하였습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 2 사용 기술 -->
+                <div class="tech-stack">
+                    <div class="tech-category">
+                        <h3>사용 언어</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">SQL</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>통계 모델링</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Statsmodels</span>
+                            <span class="tech-item">Zero-inflated Poisson</span>
+                            <span class="tech-item">GLMs</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>데이터 처리</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Pandas</span>
+                            <span class="tech-item">NumPy</span>
+                            <span class="tech-item">Scikit-learn</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>시각화</h3>
+                        <div class="tech-items">
+                            <span class="tech-item">Matplotlib</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 2 구현 내용 -->
+                <div class="implementation-grid">
+                    <div class="implementation-item">
+                        <h3>모델 특징</h3>
+                        <div class="content-grid text-only">
+                            <div class="text-content">
+                                <ul>
+                                    <li><strong>이중 모델링</strong>: Zero 발생 확률 + Poisson 분포 결합</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="implementation-item">
+                        <h3>구현 과정</h3>
+                        <div class="content-grid text-only">
+                            <div class="text-content">
+                                <ul>
+                                    <li><strong>대상 선정</strong>: 예측일 전 일주일 동안 접속 기록이 있는 유저</li>
+                                    <li><strong>특성 공학</strong>: 일부 특성을 로그화</li>
+                                    <li><strong>특성 스케일링</strong>: MinMaxScaler를 사용하여 데이터 값의 범위 일치</li>
+                                    <li><strong>모델 선택</strong>: statsmodels의 ZeroInflatedPoisson 함수 활용</li>
+                                    <li><strong>모델 검증</strong>: 교차 검증 및 성능 평가</li><div class="text-content">
+                                    <li><strong>결과 해석</strong>: Zero-inflation 확률 및 Poisson 파라미터 분석</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 프로젝트 2 결과 및 성과 -->
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>지원수 예측 성능 향상</h3>
+                        <p class="result-number">-20.8%</p>
+                        <p class="result-desc">기존 회귀 모델의 RMSE값 감소</p>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>지원 분류 성능 향상</h3>
+                        <p class="result-number">상승</p>
+                        <p class="result-desc">Precision, Recall 소폭 상승</p>
+                    </div>
+                </div>
+            </br></br>
+
+                <!-- 프로젝트 2 학습 및 개선점 -->
+                <div class="content-grid">
+                    <div class="text-content">
+                        <h3>학습 내용</h3>
+                        <ul>
+                            <li><strong>통계적 모델링</strong>: Zero-inflated 및 일반화 선형 모델의 이해와 구현</li>
+                            <li><strong>카운트 데이터 분석</strong>: Poisson 분포 및 과잉 분포 처리</li>
+                        </ul>
+                    </div>
+                    <div class="text-content">
+                        <h3>향후 개선 방향</h3>
+                        <ul>
+                            <li>테이블 인덱스 추가를 통한 학습에 필요한 데이터 추출 시간 감소</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="project-footer">
+        <div class="container">
+            <p>&copy; 2025 데이터 분석가 포트폴리오. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="project-detail.js"></script>
+</body>
+</html> 
