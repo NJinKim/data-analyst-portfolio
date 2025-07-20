@@ -478,6 +478,10 @@ body {
         --h4-size: 1.2rem;
     }
     
+    .container {
+        padding: 0 15px;
+    }
+    
     /* 홈으로 돌아가기 버튼 모바일 조정 */
     .back-to-home {
         top: 15px;
@@ -629,6 +633,10 @@ body {
 
 @media (max-width: 480px) {
     /* 작은 모바일 화면 조정 */
+    .container {
+        padding: 0 10px;
+    }
+    
     .project-title h1 {
         font-size: 1.8rem;
     }
@@ -642,8 +650,50 @@ body {
         gap: 15px;
     }
     
+    .project-header {
+        padding: 60px 0 30px;
+    }
+    
+    .content-grid {
+        gap: 20px;
+    }
+    
+    .project-section {
+        margin-bottom: 40px;
+    }
+    
+    .project-section h2 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+    
+    .toc-grid {
+        gap: 15px;
+    }
+    
+    .toc-item {
+        padding: 20px 15px;
+    }
+    
+    .toc-item h3 {
+        font-size: 1.1rem;
+    }
+    
+    .text-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .text-content p, .text-content li {
+        font-size: 0.9rem;
+    }
+    
     .results-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .result-item {
+        padding: 20px 15px;
     }
     
     .tech-items {
@@ -653,6 +703,18 @@ body {
     .tech-item {
         font-size: 0.8rem;
         padding: 6px 12px;
+    }
+    
+    .implementation-grid {
+        gap: 20px;
+    }
+    
+    .implementation-item {
+        padding: 20px 15px;
+    }
+    
+    .implementation-item h3 {
+        font-size: 1.1rem;
     }
 }
 

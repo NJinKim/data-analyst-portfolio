@@ -914,6 +914,83 @@ body {
         --card-padding: 20px;
     }
     
+    /* 컨테이너 패딩 조정 */
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* 네비게이션 모바일 메뉴 */
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--box-shadow);
+        padding: 20px 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    /* Hero 섹션 모바일 조정 */
+    .hero {
+        padding: 20px 0;
+        min-height: auto;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .hero-left {
+        flex: none;
+        width: 100%;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    
+    .hero-right {
+        text-align: center;
+    }
+    
+    .hero-name-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero-name {
+        font-size: 2rem;
+    }
+    
+    .hero-position {
+        font-size: 1.3rem;
+    }
+    
+    .hero-description p {
+        font-size: 1rem;
+    }
+    
+    .hero-contact {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
     /* 네비게이션 모바일 메뉴 */
     .hamburger {
         display: flex;
@@ -971,10 +1048,16 @@ body {
     
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .project-card {
+        margin-bottom: 20px;
     }
     
     .skill-card {
         flex-direction: column;
+        margin-bottom: 20px;
     }
     
     .skill-left {
@@ -1093,20 +1176,21 @@ body {
         --container-padding: 0 15px;
     }
     
-    .about-stats {
-        grid-template-columns: 1fr;
+    .container {
+        padding: 0 10px;
     }
     
-    .toc-grid {
-        grid-template-columns: 1fr;
+    .hero {
+        padding: 15px 0;
     }
     
-    .hero-main-title {
-        font-size: 1.3rem;
+    .hero-content {
+        gap: 20px;
     }
     
-    .hero-name-section {
-        gap: 3px;
+    .profile-image {
+        width: 150px;
+        height: 150px;
     }
     
     .hero-name {
@@ -1117,10 +1201,33 @@ body {
         font-size: 1.2rem;
     }
     
-    .profile-placeholder {
-        width: 150px;
-        height: 150px;
-        font-size: 3.5rem;
+    .hero-description p {
+        font-size: 0.9rem;
+    }
+    
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .toc-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-grid {
+        gap: 15px;
+    }
+    
+    .project-card {
+        margin-bottom: 15px;
+    }
+    
+    .skill-card {
+        margin-bottom: 15px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
     }
 }
 
