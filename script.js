@@ -30,15 +30,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // 스크롤 시 네비게이션 바 스타일 변경
+    // 스크롤 시 네비게이션 바 스타일 변경 및 스크롤 버튼 표시/숨김
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
+        const scrollToTop = document.querySelector('.scroll-to-top');
+        
         if (window.scrollY > 100) {
             navbar.style.background = 'rgba(255, 255, 255, 0.98)';
             navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            if (scrollToTop) {
+                scrollToTop.classList.add('show');
+            }
         } else {
             navbar.style.background = 'rgba(255, 255, 255, 0.95)';
             navbar.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            if (scrollToTop) {
+                scrollToTop.classList.remove('show');
+            }
         }
     });
     
@@ -86,6 +94,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // 스크롤 버튼 클릭 이벤트
+    const scrollToTopBtn = document.querySelector('.scroll-to-top-btn');
+    if (scrollToTopBtn) {
+        scrollToTopBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
     
     // 스크롤 시 현재 섹션 하이라이트
     function highlightCurrentSection() {

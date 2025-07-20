@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>기타 프로젝트 - 포트폴리오</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="project-detail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -230,7 +233,6 @@
                         <div class="content-grid text-only">
                             <div class="text-content">
                                 <ul>
-                                    <li><strong>유저 범주 워드 클라우드</strong>: 범주별 유저수를 기반으로 워드 클라우드 생성</li>
                                     <li><strong>인터랙티브 필터</strong>: 사용자 정의 분석 가능</li>
                                 </ul>
                             </div>
@@ -238,14 +240,60 @@
                     </div>
                 </div>
 
-                <!-- 프로젝트 2 결과 및 성과: 이미지로 대체 -->
-                <div class="results-grid">
-                    <div class="result-item">
-                        <div class="result-icon">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <h3>연구과제 발표</h3>
-                        <p class="result-desc">발표 자료 사각화를 통한 명확한 전달</p>
+                <!-- 프로젝트 2 결과 및 성과-->
+                
+                <!-- Tableau 대시보드 샘플 -->
+                <div class="tableau-dashboard">
+                    <div class='tableauPlaceholder' id='viz1753026162108' style='position: relative'>
+                        <noscript>
+                            <a href='#'>
+                                <img alt='대시보드 1 ' src='https://public.tableau.com/static/images/RN/RNRNXCTY4/1_rss.png' style='border: none' />
+                            </a>
+                        </noscript>
+                        <object class='tableauViz' style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                            <param name='embed_code_version' value='3' />
+                            <param name='path' value='shared%2FRNRNXCTY4' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image' value='https://public.tableau.com/static/images/RN/RNRNXCTY4/1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='ko-KR' />
+                            <param name='filter' value='publish=yes' />
+                        </object>
+                    </div>
+                    <script type='text/javascript'>
+                        var divElement = document.getElementById('viz1753026162108');
+                        var vizElement = divElement.getElementsByTagName('object')[0];
+                        if (divElement.offsetWidth > 800) {
+                            vizElement.style.minWidth = '420px';
+                            vizElement.style.maxWidth = '1200px';
+                            vizElement.style.width = '100%';
+                            vizElement.style.minHeight = '587px';
+                            vizElement.style.maxHeight = '1027px';
+                            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                        } else if (divElement.offsetWidth > 500) {
+                            vizElement.style.minWidth = '420px';
+                            vizElement.style.maxWidth = '1200px';
+                            vizElement.style.width = '100%';
+                            vizElement.style.minHeight = '587px';
+                            vizElement.style.maxHeight = '1027px';
+                            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                        } else {
+                            vizElement.style.width = '100%';
+                            vizElement.style.height = '2327px';
+                        }
+                        var scriptElement = document.createElement('script');
+                        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                    </script>
+                    
+                    <!-- 보안 관련 안내문 -->
+                    <div class="security-notice">
+                        <p><small>※ 보안상의 이유로 더미데이터를 활용한 샘플 대시보드로 대체합니다.</small></p>
                     </div>
                 </div>
             </br></br>

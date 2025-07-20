@@ -19,6 +19,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome 아이콘 라이브러리 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -29,7 +32,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <!-- 로고 또는 이름을 여기에 입력하세요 -->
-                <span>데이터 분석가 포트폴리오</span>
+                <span>데이터 분석가 김남진, 포트폴리오</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">홈</a></li>
@@ -50,32 +53,19 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <!-- 좌측 상단 제목 -->
-            <div class="hero-title-section">
-                <h1 class="hero-main-title">데이터분석가 김남진, 포트폴리오</h1>
-            </div>
             
             <div class="hero-content">
-                <!-- 좌측: 프로필 이미지와 연락처 -->
+                <!-- 좌측: 프로필 이미지 -->
                 <div class="hero-left">
                     <div class="profile-image">
-                        <!-- <img src="your-profile-image.jpg" alt="프로필 이미지"> -->
-                        <div class="profile-placeholder">
+                        <img src="포트폴리오_프로필.jpeg" alt="김남진 프로필 이미지" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="profile-placeholder" style="display: none;">
                             <i class="fas fa-user"></i>
                         </div>
                     </div>
-                    
-                    <!-- 연락처 정보를 사진 바로 아래에 배치 -->
-                    <div class="hero-contact">
-                        <a href="mailto:ektlsns@gmail.com" class="contact-link">
-                            <i class="fas fa-envelope"></i> ektlsns@gmail.com
-                        </a>
-                        <a href="tel:+82-10-6383-2722" class="contact-link">
-                            <i class="fas fa-phone"></i> 010-6383-2722
-                        </a>
-                    </div>
                 </div>
                 
-                <!-- 우측: 소개 내용 -->
+                <!-- 우측: 소개 내용과 연락처 -->
                 <div class="hero-right">
                     <div class="hero-intro">
                         <div class="hero-name-section">
@@ -90,9 +80,19 @@
                             </p>
                             <p>
                                 데이터 분석에서 나온 인사이트가 새로운 비지니스로 이어지고 
-                                그것이 다음의 데이터 분석으로 이어지는 성장의 순환 고리를 믿습니다.<br>
+                                그것이 다음의 데이터 분석으로 이어지는 성장의 순환 고리를 믿습니다. 
                                 이를 위해 조직의 비즈니스 문제를 정확히 파악하여 소통 가능한 대안들을 제시하는 것을 목표로 하고 있습니다.
                             </p>
+                        </div>
+                        
+                        <!-- 연락처 정보를 소개 텍스트 아래에 배치 -->
+                        <div class="hero-contact">
+                            <a href="mailto:ektlsns@gmail.com" class="contact-link">
+                                <i class="fas fa-envelope"></i> ektlsns@gmail.com
+                            </a>
+                            <a href="tel:+82-10-6383-2722" class="contact-link">
+                                <i class="fas fa-phone"></i> 010-6383-2722
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -145,7 +145,7 @@
                         <h4>케어네이션</h4>
                         <ul>
                             <li>데이터 기반 의사결정 지원</li>
-                            <li>여러 직무의 사람들과 협업</li>
+                            <li>여러 직무 팀원들과 협업</li>
                             <li>조직 지표 관리</li>
                             <li>데이터 마트 구성 및 관리</li>
                             <li>데이터 분석 및 시각화</li>
@@ -328,7 +328,7 @@
                             </div>
                             <div class="skill-info">
                                 <h4>Python</h4>
-                                <span class="skill-level">상</span>
+                                <span class="skill-level">중상</span>
                             </div>
                         </div>
                         <div class="skill-right">
@@ -346,7 +346,7 @@
                             </div>
                             <div class="skill-info">
                                 <h4>SQL</h4>
-                                <span class="skill-level">상</span>
+                                <span class="skill-level">중상</span>
                             </div>
                         </div>
                         <div class="skill-right">
@@ -521,11 +521,9 @@
                 <div class="other-skills-category">
                     <h3>커뮤니케이션 능력</h3>
                     <div class="communication-item">
-                        <i class="fas fa-users"></i>
                         <span>팀 협업 및 리더십</span>
                     </div>
                     <div class="communication-item">
-                        <i class="fas fa-presentation"></i>
                         <span>데이터 스토리텔링</span>
                     </div>
                 </div>
@@ -534,7 +532,6 @@
                 <div class="other-skills-category">
                     <h3>기타 능력</h3>
                     <div class="communication-item">
-                        <i class="fas fa-users"></i>
                         <span>사무 자동화</span>
                     </div>
                 </div>
@@ -615,6 +612,13 @@
             </div>
         </div>
     </section>
+
+    <!-- 맨 위로 이동 버튼 -->
+    <div class="scroll-to-top">
+        <a href="#" class="scroll-to-top-btn">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
 
     <!-- 푸터 -->
     <footer class="footer">

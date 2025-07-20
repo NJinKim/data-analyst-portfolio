@@ -1,5 +1,10 @@
 /* 프로젝트 상세 페이지 스타일 */
 
+/* 전역 폰트 설정 */
+body {
+    font-family: 'Nanum Gothic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 /* 홈으로 돌아가기 버튼 */
 .back-to-home {
     position: fixed;
@@ -688,4 +693,28 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-color);
+}
+
+/* Tableau 대시보드 */
+.tableau-dashboard {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.tableau-dashboard .tableauPlaceholder {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* 보안 안내문 */
+.security-notice {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+.security-notice p {
+    margin: 0;
+    font-size: 0.9rem;
 } 
