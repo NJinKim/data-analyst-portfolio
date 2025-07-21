@@ -78,7 +78,7 @@
                     <div class="tech-category">
                         <h3>이상치 탐지 모델</h3>
                         <div class="tech-items">
-                            <span class="tech-item">IQR</span>
+                            <span class="tech-item">Gaussian Mixtur</span>
                             <span class="tech-item">Isolation Forest</span>
                             <span class="tech-item">RRCF</span>
                         </div>
@@ -100,12 +100,12 @@
                         <h3>모델 선택 전략</h3>
                         <p>
                             실시간 데이터 탐지에 사용하기 위해 비교적 가벼운 모델을 사용하고자 하였고,
-                            모델 성능 비교를 위해 가장 단순한 IQR 모델부터 Isolation Forest, RRCF(Robust Random Cut Forest) 모델 등을 테스트하였습니다. 
+                            모델 성능 비교를 위해 Gaussian Mixture 모델부터 Isolation Forest, RRCF(Robust Random Cut Forest) 모델 등을 테스트하였습니다. 
                         </p>
                         
                         <h3>다중 모델 접근법</h3>
                         <ul>
-                            <li><strong>IQR 모델</strong>: 통계적 기반의 단순하고 빠른 이상치 탐지</li>
+                            <li><strong>Gausian Mixture Model</strong>: 확률 기반의 군집화 이상치 탐지</li>
                             <li><strong>Isolation Forest</strong>: 트리 기반의 효율적인 이상치 탐지</li>
                             <li><strong>RRCF (Robust Random Cut Forest)</strong>: 스트리밍 데이터에 적합한 이상치 탐지</li>
                         </ul>
@@ -139,11 +139,11 @@
                                 <p>
                                     다양한 이상치 탐지 모델을 개발하고 성능을 비교하여 최적의 조합을 찾았습니다.
                                 </p>
-                                <h4>모델 개발 과정:</h4>
+                                <h4>여러 모델을 제작한 후 성능 테스트:</h4>
                                 <ul>
-                                    <li><strong>IQR 모델</strong>: 통계적 임계값 기반 이상치 탐지</li>
+                                    <li><strong>Gaussian Mixture Model</strong>: 확률 기반 군집 이상치 탐지</li>
                                     <li><strong>Isolation Forest</strong>: 트리 기반 비지도 학습 이상치 탐지</li>
-                                    <li><strong>RRCF 모델</strong>: 스트리밍 데이터에 최적화된 이상치 탐지</li>
+                                    <li><strong>RRCF Model</strong>: 스트리밍 데이터에 최적화된 이상치 탐지</li>
                                 </ul>
                             </div>
                         </div>
